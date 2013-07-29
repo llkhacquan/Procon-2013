@@ -1,0 +1,38 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" x:Class="Procon.Receiver.ReceiverWindow"
+        Title="Receiver Window" Width="857">
+    <Grid Background="{DynamicResource {x:Static SystemColors.AppWorkspaceBrushKey}}" Margin="0,0,2,0">
+        <Label Content="Code" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0"/>
+        <Label Content="Received code" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,56,0,0" RenderTransformOrigin="0.485,3.527"/>
+        <Label Content="Received message" HorizontalAlignment="Left" Margin="10,278,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.467,0.5"/>
+        <TextBox x:Name="receivedMessage_TextBox" Height="229" Margin="122,265,0,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" Width="189" IsReadOnly="True" FontFamily="Courier New"/>
+        <TextBox x:Name="codeInput_Text" HorizontalAlignment="Left" Height="26" Margin="248,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="349" TextChanged="codeInput_Text_TextChanged" FontFamily="Courier New"/>
+        <Button x:Name="setPacket_Button" Content="Set Packet" HorizontalAlignment="Left" Height="26" Margin="650,10,0,0" VerticalAlignment="Top" Width="77" Click="setPacket_Button_Click"/>
+        <TextBox x:Name="receivedCode_Text" HorizontalAlignment="Left" Height="180" Margin="122,62,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" AcceptsReturn="True" IsReadOnly="True" FontFamily="Courier New"/>
+        <TextBox x:Name="currentChecksum" HorizontalAlignment="Left" Height="26" Margin="602,10,0,0" TextWrapping="Wrap" Text="{x:Null}" VerticalAlignment="Top" Width="43" IsReadOnly="True"/>
+        <Button x:Name="removeLastLine" Content="Remove last line of code" HorizontalAlignment="Left" VerticalAlignment="Top" Width="156" Margin="627,56,0,0" Height="26" Click="removeLastLine_Click" IsEnabled="False"/>
+        <Button x:Name="reset_Button" Content="Reset" HorizontalAlignment="Left" Margin="732,10,0,0" VerticalAlignment="Top" Width="75" Height="26" Click="reset_Button_Click"/>
+
+        <WrapPanel HorizontalAlignment="Left" Height="57" VerticalAlignment="Top" Width="126" Margin="116,2,0,0" Background="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}">
+            <Image x:Name="dice0" Height="24" Width="24" Source="Resources/0.PNG" MouseLeftButtonDown="dice0_MouseLeftButtonDown"/>
+            <Image x:Name="dice1" Height="24" Width="24" Source="Resources/1.PNG" MouseLeftButtonDown="dice1_MouseLeftButtonDown"/>
+            <Image x:Name="dice2" Height="24" Width="24" Source="Resources/2.PNG" MouseLeftButtonDown="dice2_MouseLeftButtonDown"/>
+            <Image x:Name="dice3" Height="24" Width="24" Source="Resources/3.PNG" MouseLeftButtonDown="dice3_MouseLeftButtonDown"/>
+            <Image x:Name="dice6" Height="24" Width="24" Source="Resources/6.PNG" MouseLeftButtonDown="dice6_MouseLeftButtonDown"/>
+            <Image x:Name="dice4" Height="24" Width="24" Source="Resources/4.PNG" MouseLeftButtonDown="dice4_MouseLeftButtonDown"/>
+            <Image x:Name="dice5" Height="24" Width="24" Source="Resources/5.PNG" MouseLeftButtonDown="dice5_MouseLeftButtonDown"/>
+
+
+            <Image x:Name="dice7" Height="24" Width="24" Source="Resources/7.PNG" MouseLeftButtonDown="dice7_MouseLeftButtonDown"/>
+            <Image x:Name="dice8" Height="24" Width="24" Source="Resources/8.PNG" MouseLeftButtonDown="dice8_MouseLeftButtonDown"/>
+            <Image x:Name="dice9" Height="24" Width="24" Source="Resources/9.PNG" MouseLeftButtonDown="dice9_MouseLeftButtonDown"/>
+
+        </WrapPanel>
+        <WrapPanel x:Name="dices_WrapPanel" HorizontalAlignment="Left" VerticalAlignment="Top" Height="125" Width="126" Margin="477,61,0,0" Background="Black" Visibility="Visible">
+
+
+        </WrapPanel>
+    </Grid>
+</Window>

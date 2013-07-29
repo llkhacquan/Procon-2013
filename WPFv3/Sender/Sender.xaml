@@ -1,0 +1,48 @@
+﻿<Window x:Class="Procon.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Sender Window" SizeToContent="WidthAndHeight" ResizeMode="CanResizeWithGrip" HorizontalContentAlignment="Center" HorizontalAlignment="Center" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" WindowStartupLocation="CenterOwner" WindowState="Maximized" WindowStyle="ThreeDBorderWindow" VerticalContentAlignment="Center" VerticalAlignment="Center">
+    <Grid>
+        <Grid x:Name="Input_message" Margin="10,10,680,0" VerticalAlignment="Top" Background="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}" Height="151">
+            <Label Content="Message:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0"/>
+            <TextBox x:Name="message_TextBox" HorizontalAlignment="Left" Margin="10,40.96,0,0" TextWrapping="Wrap" Text="Ramen,_a_part_of_Japanese_food_culture,_has_been_spreading_throughout_the_world_at_a_tremendous_pace._This,_in_turn,_has_drawn_foreign_tourists_from_different_countries_to_visit_Japan_in_search_of_ramen._Economic_growth_in_ASEAN_countries_along_with_the_yen's_depreciation_in_particular,_have_led_to_a_steady_growth_of_tourism_from_Southeast_Asia._Additionally,_individual_travel_from_Europe_and_the_United_States_has_been_growing_by_leaps_and_bounds._Meanwhile,_requests_for_Islamic-law_and_vegetarian_menus_are_also_on_a_sharp_rise._Presently,_there_are_over_1,000_ramen_shops_overseas,_and_although_preparation_of_menus_for_Islamic_law-bound_and_vegetarian_diet_at_shops_in_each_country_is_both_commonplace_and_common-sense,_such_support_from_shops_in_Japan_has_been_little_to_none_thus_far._If_ramen_is_going_to_globalize_in_the_true_sense_of_the_concept,_it_is_essential_that_such_vegetarian_versions_be_made_available._Though_Shin-Yokohama_Raumen_Museum_had_responded_to_vegetarian_requests,_a_system_to_always_provide_vegetarian_dishes_has_been_put_into_place_beginning_on_Monday_July_1,_2013._We_continue_to_strengthen_our_support_for_the_improved_travel_experience_for_foreign_tourists._The_lack_of_Wi-Fi_accessibility_has_been_said_to_be_the_number-one_ranking_difficulty_for_tourists_to_Japan,_so_we've_set_up_a_Wi-Fi_(free_public-access_wireless_LAN_accessible_environment._As_stated_before,_the_economic_growth_of_ASEAN_has_brought_about_a_rapid_increase_in_tourism_from_the_likes_of_Thai,_Malaysian,_and_Indonesian_nationalities._With_nearly_1.6_billion_people,_Muslims_make_up_about_a_fourth_of_the_world's_population,_and_about_220_million,_or_14_of_that_figure_is_from_Malaysian,_and_Indonesian_nationals._An_aspect_of_Islam_is_the_taboo_against_consuming_certain_food_ingredients_like_pork_and_alcohol,_and_the_desire_for_halal_food_products_made_from_food_sources_in_environments_that_are_permissible_and_in_accordance_with_Islamic_law._gs1e.jpg_Nevertheless,_according_to_one_Indonesian_association_for_travel_agencies,_analysis_showed_that_70%_of_Muslims_in_Indonesia_are_liberal,_and_30%_are_strict,_and_that_liberal_Muslims_can_be_found_especially_in_large_metropolitan_areas_such_as_Jakarta._In_a_program_run_by_the_Ministry_of_Foreign_Affairs,_it_was_claimed_by_Japanese_travel_agencies_arranging_travel_for_Southeast_Asian_students_that_Indonesians_were_content_as_long_as_pork_wasn't_evident_outright_in_the_food_that_was_served.*Starting_on_Monday_July_1,_2013_is_Shin-Yokohama_Raumen_Museum's_Muslim-Friendly_menu,_with_dishes_that_exclude_alcohol,_pork_and_other_taboo_ingredients_not_approved_under_halal." VerticalAlignment="Top" Width="496" SelectionChanged="chosenTextChanged" Height="100" FontFamily="Courier New"/>
+            <Button x:Name="setButton" Content="Set" HorizontalAlignment="Left" Margin="111,10,0,0" VerticalAlignment="Top" Height="25.96" Width="100" Click="setButton_Click"/>
+            <Button x:Name="resetButton" Content="Reset" HorizontalAlignment="Left" Margin="406,10,0,0" VerticalAlignment="Top" Width="100" Height="25.96" Click="resetButton_Click"/>
+            <Label Content="Length of message" HorizontalAlignment="Left" Margin="216,10,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="lengthOfMessage_TextBox" HorizontalAlignment="Left" Margin="331,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" VerticalScrollBarVisibility="Disabled" IsReadOnly="True" Width="32" Height="26"/>
+        </Grid>
+        <Grid x:Name="Packet_Creator" HorizontalAlignment="Left" Height="217.403" Margin="10,165.96,0,0" VerticalAlignment="Top" Width="516" Background="{DynamicResource {x:Static SystemColors.AppWorkspaceBrushKey}}">
+            <Label Content="Chosen text" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+            <Label Content="Start:" HorizontalAlignment="Left" Margin="137,10,0,0" VerticalAlignment="Top"/>
+            <Label Content="Length" HorizontalAlignment="Left" Margin="234,10,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="startOfChosenText_TextBox" HorizontalAlignment="Left" Margin="179.386,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top" IsReadOnly="True" Width="32"/>
+            <TextBox x:Name="lengthOfChosenText_TextBox" HorizontalAlignment="Left" Margin="285.64,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top" IsReadOnly="True" Width="32"/>
+            <Button x:Name="createPacket_Button" Content="Create Packet" HorizontalAlignment="Left" Margin="397.707,153.799,0,0" VerticalAlignment="Top" Width="108.293" Click="createPacket_Button_Click" Height="25.96"/>
+            <TextBox x:Name="chosenText_TextBox" HorizontalAlignment="Left" Height="100.376" Margin="10,40.96,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="496" FontFamily="Courier New" IsReadOnly="True"/>
+            <Label Content="Normal - Zip - Smaz" HorizontalAlignment="Left" Margin="10,153.798,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="lengthOfPackets" HorizontalAlignment="Left" Height="25.96" Margin="132.323,153.799,0,0" TextWrapping="Wrap" Text="&#xD;&#xA;" VerticalAlignment="Top" Width="260.384" IsReadOnly="True"/>
+            <ComboBox x:Name="mode_ComboBox" HorizontalAlignment="Left" Height="28" Margin="132.323,184.759,0,0" VerticalAlignment="Top" Width="79.063" SelectionChanged="mode_ComboBox_SelectionChanged" >
+
+            </ComboBox>
+            <Label Content="Choose a mode" HorizontalAlignment="Left" Height="28" Margin="10,184.759,0,0" VerticalAlignment="Top" Width="117"/>
+            <Button x:Name="viewDices_Button" Content="View Dices" HorizontalAlignment="Left" Height="29" Margin="324,183,0,0" VerticalAlignment="Top" Width="91" Click="viewDices_Button_Click" IsEnabled="False"/>
+            <Button x:Name="sendPacket_Button" Content="Send packet" HorizontalAlignment="Left" Margin="419.679,183.469,0,0" VerticalAlignment="Top" Width="86.321" Height="28.54" Click="sendPacket_Button_Click" IsEnabled="False"/>
+        </Grid>
+        <Grid HorizontalAlignment="Right" Height="651" Margin="544,10,0,0" VerticalAlignment="Top" Width="662" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}">
+            <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Visible">
+                <WrapPanel x:Name="dices_WrapPanel" HorizontalAlignment="Left"  Margin="10,10,0,0" VerticalAlignment="Top" Width="642"/>
+            </ScrollViewer>
+        </Grid>
+        <Grid x:Name="sender_Panel" HorizontalAlignment="Left" Height="272.637" Margin="10,388.363,0,0" VerticalAlignment="Top" Width="516" Background="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}">
+            <Label Content="Number of sent packets" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+            <Label Content="Sent message" HorizontalAlignment="Left" Margin="11,135,0,0" VerticalAlignment="Top"/>
+            <Button x:Name="removePacket_Button" Content="Remove Packet" HorizontalAlignment="Left" Margin="421,10,0,0" VerticalAlignment="Top" Height="27" Click="removePacket_Button_Click" IsEnabled="False"/>
+            <TextBox x:Name="sentMessage_TextBox" TextWrapping="Wrap" HorizontalAlignment="Left" Height="97" Margin="10,166,0,0" VerticalAlignment="Top" Width="496" FontFamily="Courier New" IsReadOnly="True">
+
+            </TextBox>
+            <TextBox x:Name="numberOfSentPackets_Text" HorizontalAlignment="Left" Height="26" Margin="152,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" FontFamily="Courier New" IsReadOnly="True"/>
+            <TextBox x:Name="codeViewer" HorizontalAlignment="Left" Height="88" Margin="11,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="495" IsReadOnly="True" FontFamily="Courier New"/>
+        </Grid>
+
+    </Grid>
+</Window>
